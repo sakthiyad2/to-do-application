@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=./#/" />
+    <title>Redirecting...</title>
+    <script>
+      const currentPath = window.location.pathname;
+      const basePath = currentPath.replace(/\/404\.html$/, '/');
+      const hashPath = window.location.hash || '#/';
+      window.location.replace(`${basePath}#${hashPath.replace(/^#/, '')}`);
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
