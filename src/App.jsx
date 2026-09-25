@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { TodoProvider } from './context/TodoContext';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <TodoProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
@@ -21,7 +21,7 @@ function App() {
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TodoProvider>
   );
 }
